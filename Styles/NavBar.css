@@ -1,0 +1,41 @@
+.NavBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*background-color: #ffffff; /* Example background color */
+    color: white;
+    padding: 30px;
+    transition: transform 0.3s ease; /* Smooth hide effect */
+    z-index: 100;
+    opacity: 1;
+}
+
+.NavBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    opacity: 1;
+}
+
+.NavBar a {
+    color: #0A316F;
+    font-size: 20px; /* Increase the font size */
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none;
+    padding: 5px 10px; /* Add padding for better hover area */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    opacity: 1;
+}
+
+.NavBar a:hover {
+    background-color: #dbdbe0; /* Background color on hover */
+    color: #0A316F; /* Text color on hover */
+    border-radius: 5px; /* Optional: rounded corners on hover */
+    opacity: 1;
+}
+
+.NavBar.hidden {
+    transform: translateY(-100%); /* Moves the navbar out of view */
+}

@@ -1,0 +1,69 @@
+/* 전체 배경 스타일 */
+.about-container {
+  background-color: white;
+  color: #001b44;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  overflow: visible !important;
+}
+
+/* 큰 제목 스타일 */
+.about-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #002147;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* 일반 텍스트 스타일 */
+.about-text {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+/* 섹션 스타일 (세로 정렬) */
+.about-section {
+  opacity: 1 !important;
+  max-width: 800px;
+  width: 100%;
+  background: #f4f4f4;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+  text-align: left;
+}
+
+/* 소제목 스타일 */
+.about-subheading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #002147;
+  border-left: 5px solid #002147;
+  padding-left: 10px;
+}
+
+/* 반응형 (모바일에서 간격 조정) */
+@media (max-width: 768px) {
+  .about-heading {
+    font-size: 2.5rem;
+  }
+  .about-text {
+    font-size: 1.2rem;
+  }
+  .about-subheading {
+    font-size: 1.5rem;
+  }
+}

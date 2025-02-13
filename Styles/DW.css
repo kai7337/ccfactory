@@ -1,0 +1,371 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow: auto; /* Enable scrolling */
+    position: relative; /* Ensure waves are positioned correctly */
+    min-height: 100vh;
+}
+
+/* 프로필 페이지 컨테이너 */
+.profile-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-container:hover {
+    transform: scale(1.05);
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid #0A316F;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+    animation: fadeIn 1.5s ease-out;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.programs-section {
+    margin-top: 40px;
+}
+
+.program-category {
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+}
+
+.program-category h3 {
+    font-size: 24px;
+    color: #0A316F;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.program-category ul {
+    list-style-type: none;
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.program-category ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.program-category ul li:hover {
+    color: #0A316F;
+    text-decoration: underline;
+}
+
+/* 애니메이션 정의 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Wave animation */
+.wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -1; /* Ensure waves are behind the content */
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0.5;
+    border-radius: 100%;
+    animation: wave 10s linear infinite;
+    transform: translateX(-50%);
+}
+
+.wave::before,
+.wave::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+}
+
+.wave::before {
+    opacity: 0.3;
+    animation: wave 15s linear infinite;
+}
+
+.wave::after {
+    opacity: 0.2;
+    animation: wave 20s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .profile-container {
+        padding: 20px;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    .program-category h3 {
+        font-size: 22px;body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            overflow: auto; /* Enable scrolling */
+            position: relative; /* Ensure waves are positioned correctly */
+            min-height: 100vh;
+        }
+        
+        /* 프로필 페이지 컨테이너 */
+        .profile-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .profile-container:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #0A316F;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.1);
+        }
+        
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #333;
+            animation: fadeIn 1.5s ease-out;
+        }
+        
+        p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-out;
+        }
+        
+        .programs-section {
+            margin-top: 40px;
+        }
+        
+        .program-category {
+            margin-bottom: 30px;
+            animation: slideUp 1s ease-out;
+        }
+        
+        .program-category h3 {
+            font-size: 24px;
+            color: #0A316F;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .program-category ul {
+            list-style-type: none;
+            padding: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .program-category ul li {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+        
+        .program-category ul li:hover {
+            color: #0A316F;
+            text-decoration: underline;
+        }
+        
+        /* 애니메이션 정의 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Wave animation */
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            line-height: 0;
+            z-index: -1; /* Ensure waves are behind the content */
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0.5;
+            border-radius: 100%;
+            animation: wave 10s linear infinite;
+            transform: translateX(-50%);
+        }
+        
+        .wave::before,
+        .wave::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 100%;
+        }
+        
+        .wave::before {
+            opacity: 0.3;
+            animation: wave 15s linear infinite;
+        }
+        
+        .wave::after {
+            opacity: 0.2;
+            animation: wave 20s linear infinite;
+        }
+        
+        @keyframes wave {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            100% {
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+        
+        /* 반응형 디자인 */
+        @media (max-width: 768px) {
+            .profile-container {
+                padding: 20px;
+            }
+            .profile-pic {
+                width: 150px;
+                height: 150px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            .program-category h3 {
+                font-size: 22px;
+            }
+        }
+    }
+}

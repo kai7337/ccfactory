@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide overflow to prevent scrolling */
+}
+
+.background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.introParagraph {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-top: 200px;
+    padding-left: 5%;
+    font-size: 30px;
+    font-style: oblique;
+    color: #0084ffbd;
+    justify-content: left;
+
+}
+
+
+.video-container {
+    /*margin: 0;
+    padding: 0;
+    position: relative;  Correct positioning 
+    width: 100vw;        Full width 
+    height: 100vh;     Full viewport height 
+    overflow: hidden;  Prevent any overflow */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .video {
+    position: absolute;  /* Use absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%;         /* Ensure full width */
+    height: 100%;        /* Ensure full height */
+    object-fit: cover;   /* Scale video to cover the container */
+  }
